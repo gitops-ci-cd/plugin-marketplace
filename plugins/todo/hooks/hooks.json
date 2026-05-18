@@ -1,0 +1,33 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "mcp:todo-mcp-server:upsert-todo",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%H:%M)] task saved\" >> \"${CLAUDE_PROJECT_DIR:-.}/.todo-activity.log\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp:todo-mcp-server:delete-todo",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%H:%M)] task removed\" >> \"${CLAUDE_PROJECT_DIR:-.}/.todo-activity.log\""
+          }
+        ]
+      },
+      {
+        "matcher": "mcp:todo-mcp-server:import-todos",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"[$(date -u +%H:%M)] bulk import\" >> \"${CLAUDE_PROJECT_DIR:-.}/.todo-activity.log\""
+          }
+        ]
+      }
+    ]
+  }
+}

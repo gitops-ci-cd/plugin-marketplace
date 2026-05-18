@@ -1,0 +1,10 @@
+{
+  "todo-lsp": {
+    "command": "node",
+    "args": ["${CLAUDE_PLUGIN_ROOT}/bin/todo-lsp-server.js", "--stdio"],
+    "extensionToLanguage": {
+      ".todo": "todo",
+      ".tasks": "todo"
+    }
+  }
+}

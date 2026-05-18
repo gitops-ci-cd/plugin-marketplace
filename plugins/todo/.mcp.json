@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "todo-mcp-server": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@gitops-ci-cd/todo-mcp-server@latest"
+      ],
+      "tools": [
+        "*"
+      ]
+    }
+  }
+}

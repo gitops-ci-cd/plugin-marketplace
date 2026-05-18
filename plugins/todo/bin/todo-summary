@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# todo-summary — a CLI tool added to PATH when this plugin is enabled.
+# Usage: todo-summary [filter]
+#
+# Calls the todo MCP server's list endpoint and prints a summary.
+
+set -euo pipefail
+
+FILTER="${1:-}"
+ENDPOINT="${TODO_MCP_URL:-https://ai.acme.com/mcp}"
+
+echo "📋 Todo Summary"
+echo "==============="
+echo "Endpoint: $ENDPOINT"
+echo "Filter:   ${FILTER:-<none>}"
+echo ""
+echo "(This is a demo script — wire up real HTTP calls to your MCP server here.)"

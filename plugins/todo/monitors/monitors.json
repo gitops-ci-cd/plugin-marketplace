@@ -1,0 +1,7 @@
+[
+  {
+    "name": "todo-server-health",
+    "command": "while true; do curl -sf https://ai.acme.com/health && echo 'MCP server healthy' || echo 'MCP server unreachable'; sleep 60; done",
+    "description": "Periodically checks that the remote todo MCP server is reachable"
+  }
+]

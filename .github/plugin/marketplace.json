@@ -1,0 +1,30 @@
+{
+  "name": "gitops-ci-cd-plugins",
+  "metadata": {
+    "description": "Agent plugins from gitops-ci-cd — a demo marketplace showcasing every plugin entity type.",
+    "version": "1.0.0"
+  },
+  "owner": {
+    "name": "gitops-ci-cd"
+  },
+  "plugins": [
+    {
+      "name": "todo",
+      "source": "./plugins/todo",
+      "description": "Productivity plugin for task management — demonstrates every plugin entity type. Uses the todo-mcp-server under the hood.",
+      "version": "1.0.0",
+      "skills": [
+        "./plugins/todo/skills/productivity"
+      ],
+      "mcpServers": ".mcp.json",
+      "repository": "https://github.com/gitops-ci-cd/todo-mcp-server",
+      "keywords": [
+        "todo",
+        "mcp",
+        "productivity",
+        "demo"
+      ],
+      "license": "MIT"
+    }
+  ]
+}
