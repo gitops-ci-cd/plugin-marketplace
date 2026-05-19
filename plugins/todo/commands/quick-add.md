@@ -2,6 +2,7 @@
 description: Capture a task quickly so you can get back to what you were doing
 disable-model-invocation: true
 ---
+# Quick Add
 
 The user wants to capture "$ARGUMENTS" as a task without breaking flow.
 

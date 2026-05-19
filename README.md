@@ -1,11 +1,11 @@
 # Plugin Marketplace
 
-A demo marketplace from [gitops-ci-cd](https://github.com/gitops-ci-cd) that showcases **every plugin entity type** supported by Claude Code, with Copilot compatibility.
+A demo marketplace that showcases **every plugin entity type** supported by Claude Code, with Copilot compatibility.
 
 ## Plugins
 
 | Plugin | Description |
-|--------|-------------|
+| -------- | ------------- |
 | [todo](plugins/todo/) | Productivity & task management — skills, commands, agents, hooks, MCP, LSP, monitors, bin, settings |
 
 ## Usage
@@ -29,7 +29,7 @@ The `.github/plugin/marketplace.json` provides Copilot-compatible metadata. Copi
 There is **no single universal standard** for AI coding-assistant plugins. This repo supports both major formats:
 
 | Path | Client | Purpose |
-|------|--------|---------|
+| ------ | -------- | --------- |
 | `.claude-plugin/marketplace.json` | Claude Code | Canonical marketplace manifest |
 | `.github/plugin/marketplace.json` | VS Code Copilot | Copilot marketplace manifest |
 | `.mcp.json` (in plugin) | Both | MCP server config (shared format) |
@@ -44,7 +44,7 @@ There is **no single universal standard** for AI coding-assistant plugins. This 
 
 ## Structure
 
-```
+```sh
 .claude-plugin/
   marketplace.json              ← Claude Code marketplace manifest
 .github/plugin/
@@ -60,7 +60,7 @@ plugins/
       quick-add.md              ← /todo:quick-add <title>
       status.md                 ← /todo:status
     agents/
-      todo-coach.md             ← coach subagent
+      coach.md                  ← coach subagent
     hooks/
       hooks.json                ← activity log on task changes
     monitors/
@@ -77,7 +77,7 @@ plugins/
 ## Entity Type Reference
 
 | # | Entity | File | Invocation | Description |
-|---|--------|------|------------|-------------|
+| --- | -------- | ------ | ------------ | ------------- |
 | 1 | **Skill** | `skills/<name>/SKILL.md` | Auto (model chooses) or `/plugin:skill` | Markdown with YAML frontmatter. Claude uses it when the user's task matches the `description`. |
 | 2 | **Command** | `commands/<name>.md` | `/plugin:command [args]` | Flat markdown file. User-invoked slash command. `$ARGUMENTS` captures input. |
 | 3 | **Agent** | `agents/<name>.md` | `/agents` menu or `settings.json` | Markdown with YAML frontmatter. Defines system prompt, model, and tool allow/deny lists. |

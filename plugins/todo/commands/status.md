@@ -2,6 +2,7 @@
 description: Get a quick read on where things stand — what's done, what's next, what's stale
 disable-model-invocation: true
 ---
+# Status
 
 Give me a snapshot of my current workload:
 

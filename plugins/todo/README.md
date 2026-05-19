@@ -5,11 +5,11 @@ A productivity plugin that helps you organize, prioritize, and stay on top of yo
 ## What it provides
 
 | Entity | Path | What you get |
-|--------|------|--------------|
+| -------- | ------ | -------------- |
 | **Skill** | `skills/productivity/SKILL.md` | Claude auto-activates when you ask "what should I work on?" or "I'm overwhelmed" |
 | **Command** | `commands/quick-add.md` | `/todo:quick-add Buy milk` — capture without breaking flow |
 | **Command** | `commands/status.md` | `/todo:status` — workload snapshot: next up, done today, going stale |
-| **Agent** | `agents/todo-coach.md` | A coach subagent that helps you decide what to focus on |
+| **Agent** | `agents/coach.md` | A coach subagent that helps you decide what to focus on |
 | **Hook** | `hooks/hooks.json` | Activity log — appends to `.todo-activity.log` on every task change |
 | **MCP server** | `.mcp.json` | Wires in `@gitops-ci-cd/todo-mcp-server` for the actual tools |
 | **LSP server** | `.lsp.json` | Code intelligence for `.todo` / `.tasks` files (placeholder) |
@@ -19,7 +19,7 @@ A productivity plugin that helps you organize, prioritize, and stay on top of yo
 
 ## The split
 
-```
+```sh
 ┌─────────────────────────────────┐
 │  This plugin (todo)             │  ← Workflows, coaching, commands
 │  • What should I work on next?  │
@@ -38,11 +38,7 @@ A productivity plugin that helps you organize, prioritize, and stay on top of yo
 The `.mcp.json` uses npx by default. Alternatives:
 
 | Transport | Value |
-|-----------|-------|
+| --------- | ----- |
 | stdio (npx) | `npx @gitops-ci-cd/todo-mcp-server@latest` |
 | HTTP | `https://ai.acme.com/mcp` |
 | Docker | `ghcr.io/gitops-ci-cd/todo-mcp-server` |
-
-## Prerequisites
-
-- Node.js 18+
